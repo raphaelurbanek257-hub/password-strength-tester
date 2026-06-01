@@ -1,0 +1,14 @@
+## First-Time Setup (Windows)
+
+If you see errors like `'git' is not recognized` or `'pip' is not recognized`, you need to install two programs:
+
+1. **Install Git:** https://git-scm.com/downloads/win (Use all default settings)
+2. **Install Python:** https://www.python.org/downloads/ (Make sure to check **"Add Python to PATH"** )
+3. **Restart** your Command Prompt
+
+After installing, these commands will work:
+```bash
+git clone https://github.com/raphaelurbanek257-hub/password-strength-tester.git
+cd password-strength-tester
+pip install requests
+python password_tester.py
