@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import re
 import sys
 import math
@@ -145,7 +145,7 @@ def get_suggestions(password, entropy, complexity_score):
         suggestions.append(f"Avoid dictionary words: {', '.join(dict_words)}")
     return suggestions
 
-def get_rating(complexity_score, entropy, length_score):
+def get_rating(complexity_score, entropy, length_score, password):
     total = complexity_score + length_score
     if entropy >= 60 and total >= 5 and not check_common(password):
         return "EXCELLENT"
@@ -184,7 +184,7 @@ def main():
         crack_time = estimate_crack_time(entropy)
         breach_count = check_breach(password)
         suggestions = get_suggestions(password, entropy, complexity_score)
-        rating = get_rating(complexity_score, entropy, length_score)
+        rating = get_rating(complexity_score, entropy, length_score, password)
         
         print("="*50)
         print(f"Password: {password}")
@@ -235,3 +235,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+  
