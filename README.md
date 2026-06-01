@@ -15,7 +15,7 @@ A professional tool to test password security using entropy calculation, diction
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/password-strength-tester.git
+git clone https://github.com/raphaelurbanek257-hub/password-strength-tester.git
 cd password-strength-tester
 pip install requests
 python password_tester.py
