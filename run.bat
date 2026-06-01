@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 echo Installing requests module...
 python -m pip install requests
 echo.
